@@ -1,0 +1,11 @@
+name: The name of my project/package. Used by npm to identify it.
+version: The version of my application following Semantic Versioning
+main: The entry point if someone imports my package.Can be ignored if you're not publishing to npm.
+scripts:Defines command-line scripts.test: is a placeholder that prints an error.
+keywords: An optional array of keywords for searchability on npm. Not needed unless you're publishing the package.
+author: My name or my team's name.important when publishing
+license: Declares the license for the code (e.g., MIT, ISC). ISC is a permissive license like MIT.
+description:short explanation of my  project. Can help if i want to describe it for others
+dependencies are packages required to run the application
+-Apollo Server v4 — the core GraphQL server engine i am using.and so on
+devDependencies	Tools used only during development

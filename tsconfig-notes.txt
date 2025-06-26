@@ -1,0 +1,7 @@
+compilerOptions: This section contains all the settings that control how TypeScript compiles your code
+target: Specifies the JavaScript version that TypeScript should compile to.
+module: Sets the module system used for bundling imports/exports.
+rootDir: Tells the compiler where the source TypeScript files are located.
+outDir: Where the compiled JavaScript files will be placed.
+strict: Enables all strict type-checking options, making TypeScript more robust and error-proof.
+esModuleInterop: Allows compatibility between CommonJS and ESModules.
