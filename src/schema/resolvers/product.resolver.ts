@@ -2,7 +2,7 @@ import { products } from "../../data/products";
 import { validateInput } from "../../utils/validateInput";
 import { UserInputError } from "apollo-server";
 import { CreateProductSchema, UpdateProductSchema } from '../Validation/product.schema';
-import { normalizeProductIds } from "../../utils/normalizeProductIds";
+import { normalizeProductIds } from "../../utils/normalizeIds";
 
 
 

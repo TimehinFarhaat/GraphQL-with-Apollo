@@ -2,7 +2,7 @@ import { users } from "../../data/users";
 import { validateInput } from "../../utils/validateInput";
 import { UserInputError } from "apollo-server";
 import { UpdateUserSchema, CreateUserSchema } from '../Validation/user.schema';
-import { normalizeUserIds } from "../../utils/normalizeUserIds";
+import { normalizeUserIds } from "../../utils/normalizeIds";
 
 
 
