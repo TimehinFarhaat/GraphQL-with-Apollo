@@ -47,6 +47,39 @@ cd GraphQL-with-Apollo
 npm install
 npm run dev
 
+
+Project Structure
+├── src/
+│   ├── data/                      → Static in-memory data
+│   │   ├── users.ts               → Hardcoded users array
+│   │   └── products.ts            → Hardcoded products array
+│
+│   ├── loaders/                   → DataLoader setup for batching
+│   │   ├── userLoader.ts          → Batch-load users by ID
+│   │   └── productLoader.ts       → Batch-load products by ID
+│
+│   ├── schema/                      → GraphQL resolvers and validation
+│   │   ├── resolvers/              
+│   │   │   ├── user.resolver.ts     → User resolver functions
+│   │   │   └── product.resolver.ts  → Product resolver functions
+│   │   ├── validation/              → Zod schemas for input validation
+│   │   │   ├── user.schema.ts       → User validation schema
+│   │   │   └── product.schema.ts    → Product validation schema
+|
+│   ├── utils/                     → Utility functions
+│   │   ├── validateInput.ts       → Zod validation helper
+│   │   ├── reorderIds.ts          → ID reordering utility after deletion
+│
+│   ├── validation/                → Zod schemas
+│   │   ├── user.schema.ts         → Create & update schema for user
+│   │   └── product.schema.ts      → Create & update schema for product
+│
+│   └── index.ts                   → Apollo Server initialization
+
+
+
+
+
 🧪 Sample Playground Queries
 USER
 📌 Create User
@@ -66,6 +99,7 @@ name
 email
 }
 }
+
 📌 Update User
 mutation {
 updateUser(input: { id: "1", name: "Alicia" }) {
@@ -75,10 +109,11 @@ email
 }
 }
 📌 Delete User
-BY ID BY EMAIL
-mutation { mutation { deleteUser(email: "1") }  
- deleteUser(id: "1")
+BY ID     BY EMAIL(change id to email)
+mutation {
+  deleteUser(id: "2")
 }
+
 📌 Get User by Email
 query {
 getUserByEmail(email: "alice@example.com") {
@@ -97,6 +132,7 @@ name
 price
 }
 }
+
 📌 Filter Products
 query {
 filterProducts(name: "choco") {
