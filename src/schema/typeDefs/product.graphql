@@ -8,7 +8,7 @@ type Product {
 
 type Query {
   products: [Product!]!
-  product(id: ID!): Product
+   filterProducts(name: String, price: String): [Product!]!
 }
 
 input CreateProduct {
